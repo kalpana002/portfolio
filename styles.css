@@ -8,44 +8,32 @@
 :root {
   --bg-primary: #faf7ff;
   --bg-secondary: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #64748b;
-  --accent: #6366f1;
-  --accent-hover: #5855eb;
-  --border: #e2e8f0;
   --card-bg: rgba(255, 255, 255, 0.5);
-  --card-border: rgba(255, 255, 255, 0.2);
+  --card-border: rgba(109, 93, 111, 0.2);
 }
 
 .dark {
-  --bg-primary: #0f0a1a;
+   --bg-primary: #0f0a1a;
   --bg-secondary: #1e293b;
   --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --accent: #818cf8;
-  --accent-hover: #a5b4fc;
-  --border: #1e293b;
+
   --card-bg: rgba(15, 23, 42, 0.5);
-  --card-border: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.1);  
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
-  /* background: linear-gradient(135deg, 
-      rgba(147, 51, 234, 0.1) 0%, 
-      rgba(236, 72, 153, 0.1) 25%, 
-      rgba(99, 102, 241, 0.1) 100%); */
-      background-color: var(--bg-primary);
-
+  background: var(--bg-primary);
+  /* background-color: var(--bg-primary);  */
   min-height: 100vh;
   transition: all 0.3s ease;
 }
 
 /* Header */
 .header {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -92,14 +80,14 @@ body {
   transform: scale(1.05);
 }
 
-/* about Section */
-.about-section {
+/* Hero Section */
+.hero-section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-.about-content {
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +116,7 @@ body {
 }
 
 .profile-text h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   /* font-weight: bold; */
   margin-bottom: 1rem;
   color: var(--text-primary);
@@ -141,16 +129,10 @@ body {
 }
 .description {
   color: var(--text-secondary);
-  font: 1.2em sans-serif;
+  /* font: 1.2em sans-serif; */
   max-width: 28rem;
   margin: 0 auto;
 }
-
-/* .company {
-  color: var(--text-primary);
-  font-weight: 600;
-} */
-
 
 
 /* Projects Section */
@@ -161,7 +143,7 @@ body {
 }
 
 .projects-section h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--text-primary);
   margin-bottom: 2rem;
@@ -263,11 +245,11 @@ body {
 }
 
 .contacts-section h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--text-primary);
   margin-bottom: 1rem;
-  border-bottom: 2px solid #ccc;
+  /* border-bottom: 2px solid #ccc; */
 }
 
 .contacts-grid {
@@ -281,6 +263,7 @@ body {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  border-bottom: 1px ;
   
 }
 
@@ -329,50 +312,6 @@ body {
   margin: 0;
 }
 
-.social-links h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-}
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 0.75rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.social-link:hover {
-  background: var(--bg-secondary);
-  transform: translateY(-2px);
-}
-
-.social-link svg {
-  color: var(--text-secondary);
-  transition: color 0.3s ease;
-}
-
-.social-link:hover svg {
-  color: var(--accent);
-}
-
-.social-link span {
-  font-weight: 500;
-  color: var(--text-primary);
-}
 
 /* Footer */
 .footer {
@@ -433,7 +372,7 @@ body {
 
 /* Responsive Design */
 @media (min-width: 768px) {
-  .about-content {
+  .hero-content {
       flex-direction: row;
       text-align: left;
   }
@@ -447,10 +386,10 @@ body {
   .profile-text {
       order: 2;
   }
-
+/* 
   .profile-text h1 {
-      font-size: 3.5rem;
-  }
+      font-size: 2rem;
+  } */
 
   .description {
       margin: 0;
